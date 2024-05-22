@@ -40,35 +40,31 @@ let team = [
 
 for(let i = 0; i < team.length; i++){
     const teamArticle = document.createElement('article');
-    teamArticle.classList.add('teamArticle');
+    teamArticle.classList.add('teamArticle'+'-'+i);
     teamGrid.appendChild(teamArticle);
+    teamNameAppend(team[i],i);
+    teamRoleAppend(team[i],i);
+    teamImageAppend(team[i],i);
+    console.log(team[i]);
 }
 
-for(let i=0; i<team.length; i++){
-    teamNameAppend(team[i]);
-    teamRoleAppend(team[i]);
-    teamImageAppend(team[i]);
-}
 
-
-function teamNameAppend(array){
-    const teamArticle = document.querySelector('article.teamArticle');
+function teamNameAppend(array, i){
+    const teamArticle = document.querySelector('article.teamArticle'+'-'+i);
     let teamArticleAdd=document.createTextNode(array.nome);
     teamArticle.appendChild(teamArticleAdd);
 }
 
-function teamRoleAppend(array){
-    const teamArticle = document.querySelector('article.teamArticle');
+function teamRoleAppend(array, i){
+    const teamArticle = document.querySelector('article.teamArticle'+'-'+i);
     let teamArticleAdd=document.createTextNode(array.ruolo);
     teamArticle.appendChild(teamArticleAdd);
 }
 
-function teamImageAppend(array){
-    const teamArticle = document.querySelector('article.teamArticle');
+function teamImageAppend(array, i){
+    const teamArticle = document.querySelector('article.teamArticle'+'-'+i);
     let teamArticleAdd=document.createTextNode(array.foto);
     teamArticle.appendChild(teamArticleAdd);
 }
-
-
 
 
