@@ -65,6 +65,7 @@ function teamImageAppend(array, i){
     const teamArticle = document.querySelector('article.teamArticle'+'-'+i);
     let teamArticleAdd=document.createTextNode(array.foto);
     teamArticle.appendChild(teamArticleAdd);
+    
 }
 
 
